@@ -1,0 +1,99 @@
+html, body {
+    font: 1em/1.5em Helvetica, sans-serif;
+    -webkit-user-select: none;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 1.7em;
+    font-weight: normal;
+    line-height: 1.7em;
+}
+
+fieldset.screenRes {
+    background-color:       red;
+    width:                  350px;
+    border:                 2px solid #000;
+    -webkit-border-radius:  10px;
+    padding:                20px;
+}
+
+fieldset > label:first-child {
+    display:                block;
+    font-size:              1em;
+}
+
+fieldset button {
+    margin-top:             20px;
+}
+
+fieldset input {
+    vertical-align:         top;
+}
+
+ul li {
+    list-style: circle;
+    margin: 0px 0px 0px 25px;
+}
+
+a {
+    color: #039;
+    font-weight: bold;
+}
+a:visited {
+    color: #006;
+}
+a:hover {
+    color: #00f;
+}
+a:focus {
+    outline: #666 dotted 1px;
+}
+
+.mainContent {
+    position:               relative;
+    min-height:             100%;
+
+    width:                  85%;
+    min-width:              900px;
+    margin:                 0px auto;
+}
+
+.copy {
+    width: 45%;
+    padding-bottom: 35px;
+}
+
+.copy p {
+    margin: 15px 0px;
+}
+
+.copy code {
+    font: 0.8em Monaco, Courier;
+}
+
+header {
+    border-bottom:          1px solid #999;
+    margin-bottom:          10px;
+}
+
+footer {
+    position:               absolute;
+    bottom:                 0;
+    padding:                5px 0px;
+    border-top:             1px solid #999;
+    height:                 30px;
+    width:                  100%;
+    line-height:            0.7em;    
+    font-size:              0.6em;
+/*    background-color: red;*/
+}
+
+div #copyright {
+    font-size:              0.6em;
+    line-height:            1em;
+    float:                  right;
+    text-align:             right;
+}

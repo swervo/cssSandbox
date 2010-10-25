@@ -1,0 +1,39 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #CCC;
+    font-family: Helvetica, sans-serif;
+}
+
+body:after {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.someContent {
+    height: 40px;
+    border: 2px solid #666;
+	-webkit-box-sizing: border-box;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+}
+
+@media (orientation:portrait) {
+    .someContent {
+        width: 100%;
+    	background-color: black;
+    	color: white;
+    	margin: 5% 0%;
+    }
+}
+
+@media (orientation:landscape) {
+	.someContent {
+        width: 50%;
+    	background-color: white;
+    	color: black;
+    	margin: 5% 0%;
+    }
+}

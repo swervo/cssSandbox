@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test rig for mobile CSS3 media queries</title>
+		<link rel="stylesheet" href="../common/styles/style.css">
+		<script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+        <div class="mainContent">        
+            <header>
+                <h1>Test rig for mobile CSS3 media queries</h1>
+            </header>
+            
+            <div class="controls">
+                <fieldset class="screenRes">
+                    <label>Screen resolution:</label>
+                    <input type="radio" value="QVGA" name="screenRes" id="qvgaScreen" onClick="screenProportions.setScreenSize(this.value);" CHECKED>
+                    <label for="qvgaScreen">QVGA 320x240 (eg. Nokia 6700)</label><br>
+                    <input type="radio" value="HVGA" name="screenRes" id="hvgaScreen" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="hvgaScreen">HVGA 480x320 (eg. iPhone 3G, 3GS)</label><br>
+                    <input type="radio" value="nHD" name="screenRes" id="nHD" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="nHD">nHD 640x360 (eg. Nokia N8)</label><br>
+                    <input type="radio" value="VGA" name="screenRes" id="vga" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="vga">VGA (640x480)</label><br>
+                    <input type="radio" value="WVGA" name="screenRes" id="wvgaScreen" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="wvgaScreen">WVGA 800x480 (eg. Nokia N900, Nexus One)</label><br>
+                    <input type="radio" value="SVGA" name="screenRes" id="svgaScreen" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="svgaScreen">SVGA (800x640)</label><br>
+                    <button class="switch" id="orientation">Switch orientation</button>
+                </fieldset>
+            </div>
+
+            <div id="copy" class="copy">
+                <p class="p">Simple rig for testing mobile CSS3 media queries in the browser thus saving:
+                </p>
+                <ul>
+                    <li>Resizing browser to activate the queries</li>
+                    <li>Deploying code to multiple devices</li>
+                </ul>
+				<p class="p">It uses an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
+				</p>
+				<p class="p">The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the <code>/apps</code> directory and change the path in the <code>placeContent</code> method of <code>/scripts/main.js</code> to set it as the iFrame src.
+				</p>
+				<p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk">...index.html?http://news.bbc.co.uk</a>
+				</p>
+				<p class="p">A good example to try here is <a href="http://www.colly.com/">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
+				</p>
+				<p class="p">Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> in development can be run directly in the browser as well. The test rig just allows verification of CSS across different device screen sizes and orientations.
+                </p>
+    	    </div>
+    	    
+    	    <footer>
+                <span id="date">
+                    Dominic Butler - 25th October 2010
+                </span>
+                <span id="twitter">- <a href="http://twitter.com/swervo">twitter</a></span>
+                <span id="tumblr">- <a href="http://swervo.tumblr.com/">tumblr</a></span>
+                <span id="github">- <a href="http://github.com/swervoCode">github</a></span>
+                <div id="copyright">
+                    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+                        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png"/>
+                    </a><br/>
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" style="font-weight:normal;">Creative Commons Attribution 3.0 Unported License</a>.
+                </div>
+    		</footer>
+    		
+    		<!-- This iFrame container is to constrain the component to a device screen size -->
+            <iFrame id="deviceScreen" class="screen"></iFrame>
+		</div>
+
+	</body>
+</html>

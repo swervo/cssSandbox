@@ -1,0 +1,85 @@
+/* screen class is just for representing the device screen size.
+   Adjusting the width demonstrates how the component scales to the available screen estate */
+
+.screen {
+	position:               absolute;
+    right:                  0px;
+    top:                    57px;
+	border:                 1px solid #666;
+	overflow:               hidden;
+	-webkit-box-shadow:     0px 0px 8px #333;
+}
+
+/* QVGA */
+
+.portrait.QVGA {
+    width:                  240px;
+    height:                 320px;
+}
+
+.landscape.QVGA {
+    width:                  320px;
+    height:                 240px;
+}
+
+/* HVGA - iPhone (pre iPhone 4) */
+
+.portrait.HVGA {
+    width:                  320px;
+    height:                 480px;
+}
+
+.landscape.HVGA {
+    width:                  480px;
+    height:                 320px;
+}
+
+
+/* nHD - eg. Nokia N8 */
+
+.portrait.nHD {
+    width:                  360px;
+    height:                 640px;
+}
+
+.landscape.nHD {
+    width:                  640px;
+    height:                 360px;
+}
+
+/* VGA */
+
+.portrait.VGA {
+    width:                  480px;
+    height:                 640px;
+}
+
+.landscape.VGA {
+    width:                  640px;
+    height:                 480px;
+}
+
+/* WVGA - eg. Nokia N900 */
+
+.portrait.WVGA {
+    width:                  480px;
+    height:                 800px;
+}
+
+.landscape.WVGA {
+    width:                  800px;
+    height:                 480px;
+}
+
+
+/* SVGA */
+
+.portrait.SVGA {
+    width:                  600px;
+    height:                 800px;
+}
+
+.landscape.SVGA {
+    width:                  800px;
+    height:                 600px;
+}

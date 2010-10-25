@@ -1,0 +1,11 @@
+@media (orientation:portrait) {
+	body:after {
+        content: "WVGA:portrait";
+    }
+}
+
+@media (orientation:landscape) {
+	body:after {
+        content: "WVGA:landscape";
+    }
+}

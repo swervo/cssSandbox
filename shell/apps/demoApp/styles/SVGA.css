@@ -1,0 +1,11 @@
+@media (orientation:portrait) {
+	body:after {
+        content: "SVGA:portrait";
+    }
+}
+
+@media (orientation:landscape) {
+	body:after {
+        content: "SVGA:landscape";
+    }
+}

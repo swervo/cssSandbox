@@ -1,0 +1,16 @@
+@media (orientation:portrait) {
+	body:after {
+        content: "QVGA:portrait";
+    }
+}
+
+@media (orientation:landscape) {
+	body:after {
+        content: "QVGA:landscape";
+    }
+}
+
+
+
+
+
