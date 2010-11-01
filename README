@@ -15,8 +15,10 @@ Alternatively you can append a query url to have it load directly in the iFrame,
 
 A good example to try here is "http://www.colly.com/" which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
 
-Obviously applications in development can be run directly in the browser as well. 
-This test rig just allows easy verification of CSS across different device screen sizes and orientations.
+Another excellent example is "http://hicksdesign.co.uk/ which has a really nice fluid layout that scales right down to QVGA.
+
+Obviously applications being developed can be run directly in the browser as well. 
+The test rig just allows easy verification of CSS across different device screen sizes and orientations.
 
 = Resolutions included:
 
