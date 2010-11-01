@@ -1,13 +1,17 @@
 /* screen class is just for representing the device screen size.
    Adjusting the width demonstrates how the component scales to the available screen estate */
 
+.screenFrame {
+    overflow: auto;
+}
+
 .screen {
-	position:               absolute;
+    position:               absolute;
     right:                  0px;
     top:                    57px;
-	border:                 1px solid #666;
-	overflow:               hidden;
-	-webkit-box-shadow:     0px 0px 8px #333;
+    border:                 1px solid #666;
+    overflow:               hidden;
+    -webkit-box-shadow:     0px 0px 8px #333;
 }
 
 /* QVGA */

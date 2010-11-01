@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Test rig for mobile CSS3 media queries</title>
-		<link rel="stylesheet" href="../common/styles/style.css">
-		<script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
+        <title>Test rig for mobile CSS3 media queries</title>
+        <link rel="stylesheet" href="../common/styles/style.css">
+        <script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-12491678-3']);
           _gaq.push(['_trackPageview']);
@@ -16,9 +16,9 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
         </script>
-	</head>
-	
-	<body>
+    </head>
+
+    <body>
         <div class="mainContent">        
             <header>
                 <h1>Test rig for mobile CSS3 media queries</h1>
@@ -50,19 +50,21 @@
                     <li>Resizing browser to activate the queries</li>
                     <li>Deploying code to multiple devices</li>
                 </ul>
-				<p class="p">It uses an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
-				</p>
-				<p class="p">The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the <code>/apps</code> directory and change the path in the <code>placeContent</code> method of <code>/scripts/main.js</code> to set it as the iFrame src.
-				</p>
-				<p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk">...index.html?http://news.bbc.co.uk</a>
-				</p>
-				<p class="p">A good example to try here is <a href="http://www.colly.com/">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
-				</p>
-				<p class="p">Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> in development can be run directly in the browser as well. The test rig just allows verification of CSS across different device screen sizes and orientations.
+                <p class="p">It uses an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
                 </p>
-    	    </div>
-    	    
-    	    <footer>
+                <p class="p">The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the <code>/apps</code> directory and change the path in the <code>placeContent</code> method of <code>/scripts/main.js</code> to set it as the iFrame src.
+                </p>
+                <p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk">...index.html?http://news.bbc.co.uk</a>
+                </p>
+                <p class="p">A good example to try here is <a href="http://www.colly.com/">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
+                </p>
+                <p class="p">Another excellent example is <a href="http://hicksdesign.co.uk/">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
+                </p>
+                <p class="p">Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> being developed can be run directly in the browser as well. The test rig just allows easy verification of CSS across different device screen sizes and orientations.
+                </p>
+            </div>
+
+            <footer>
                 <span id="date">
                     Dominic Butler - 27th October 2010
                 </span>
@@ -75,11 +77,13 @@
                     </a><br/>
                     This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" style="font-weight:normal;">Creative Commons Attribution 3.0 Unported License</a>.
                 </div>
-    		</footer>
-    		
-    		<!-- This iFrame container is to constrain the component to a device screen size -->
-            <iFrame id="deviceScreen" class="screen"></iFrame>
-		</div>
+            </footer>
 
-	</body>
+            <!-- This iFrame container is to constrain the component to a device screen size -->
+            <div id="screenFrame" class="screenFrame">
+                <iFrame id="deviceScreen" class="screen"></iFrame>
+            </div>
+        </div>
+
+    </body>
 </html>

@@ -12,7 +12,7 @@ h1 {
 }
 
 fieldset.screenRes {
-	background: 			-webkit-gradient(linear, left top, left bottom, color-stop(0.0, #F9F9F9), color-stop(0.5, #E4E3E3), to(#D6D4D4));
+	background:             -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #F9F9F9), color-stop(0.5, #E4E3E3), to(#D6D4D4));
     width:                  350px;
     border:                 2px solid #D8D8D8;
     -webkit-border-radius:  10px;
@@ -54,7 +54,6 @@ a:focus {
 .mainContent {
     position:               relative;
     min-height:             100%;
-
     width:                  85%;
     min-width:              900px;
     margin:                 0px auto;
@@ -85,9 +84,8 @@ footer {
     border-top:             1px solid #999;
     height:                 30px;
     width:                  100%;
-    line-height:            0.7em;    
+    line-height:            0.7em;
     font-size:              0.6em;
-/*    background-color: red;*/
 }
 
 div #copyright {
