@@ -36,7 +36,6 @@ var screenProportions = {
     },
 
     setScreenSize: function(screenSize) {
-        console.log("setting screen size");
         this.screenSize = screenSize;
         this.updateDeviceClasses();
     },

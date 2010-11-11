@@ -12,6 +12,7 @@
     border:                 1px solid #666;
     overflow:               hidden;
     -webkit-box-shadow:     0px 0px 8px #333;
+    -moz-box-shadow:        0px 0px 8px #333;
 }
 
 /* QVGA */
