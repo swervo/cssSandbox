@@ -25,9 +25,10 @@ The test rig just allows easy verification of CSS across different device screen
     QVGA 320x240 (eg. Nokia 6700)
     HVGA 480x320 (eg. iPhone 3G, 3GS)
     nHD 640x360 (eg. Nokia N8)
-    VGA (640x480)
+    VGA 640x480
     WVGA 800x480 (eg. Nokia N900, Nexus One)
-    SVGA (800x640)
+    SVGA 800x640
+    XGA 1024x768 (eg. iPad)
 
 = License
 

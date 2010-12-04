@@ -88,3 +88,16 @@
     width:                  800px;
     height:                 600px;
 }
+
+
+/* XGA */
+
+.portrait.XGA {
+    width:                  768px;
+    height:                 1024px;
+}
+
+.landscape.XGA {
+    width:                  1024px;
+    height:                 768px;
+}
