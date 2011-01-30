@@ -5,17 +5,17 @@
         <link rel="stylesheet" href="../common/styles/style.css">
         <script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-12491678-3']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
+        <!-- // <script type="text/javascript">
+        //   var _gaq = _gaq || [];
+        //   _gaq.push(['_setAccount', 'UA-12491678-3']);
+        //   _gaq.push(['_trackPageview']);
+        // 
+        //   (function() {
+        //     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        //   })();
+        // </script> -->
     </head>
 
     <body>
@@ -27,20 +27,20 @@
             <div class="controls">
                 <fieldset class="screenRes">
                     <label>Screen resolution:</label>
-                    <input type="radio" value="QVGA" name="screenRes" id="qvgaScreen" onClick="screenProportions.setScreenSize(this.value);" CHECKED>
-                    <label for="qvgaScreen">QVGA 320x240 (eg. Nokia 6700)</label><br>
-                    <input type="radio" value="HVGA" name="screenRes" id="hvgaScreen" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="hvgaScreen">HVGA 480x320 (eg. iPhone 3G, 3GS)</label><br>
+                    <input type="radio" value="QVGA" name="screenRes" id="QVGA" onClick="screenProportions.setScreenSize(this.value);" CHECKED>
+                    <label for="QVGA">QVGA 320x240 (eg. Nokia 6700)</label><br>
+                    <input type="radio" value="HVGA" name="screenRes" id="HVGA" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="HVGA">HVGA 480x320 (eg. iPhone 3G, 3GS)</label><br>
                     <input type="radio" value="nHD" name="screenRes" id="nHD" onClick="screenProportions.setScreenSize(this.value);">
                     <label for="nHD">nHD 640x360 (eg. Nokia N8)</label><br>
-                    <input type="radio" value="VGA" name="screenRes" id="vga" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="vga">VGA 640x480</label><br>
-                    <input type="radio" value="WVGA" name="screenRes" id="wvgaScreen" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="wvgaScreen">WVGA 800x480 (eg. Nokia N900, Nexus One)</label><br>
-                    <input type="radio" value="SVGA" name="screenRes" id="svgaScreen" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="svgaScreen">SVGA 800x640</label><br>
-                    <input type="radio" value="XGA" name="screenRes" id="xgaScreen" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="xgaScreen">XGA 1024x768 (eg. iPad)</label><br>
+                    <input type="radio" value="VGA" name="screenRes" id="VGA" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="VGA">VGA 640x480</label><br>
+                    <input type="radio" value="WVGA" name="screenRes" id="WVGA" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="WVGA">WVGA 800x480 (eg. Nokia N900, Nexus One)</label><br>
+                    <input type="radio" value="SVGA" name="screenRes" id="SVGA" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="SVGA">SVGA 800x640</label><br>
+                    <input type="radio" value="XGA" name="screenRes" id="XGA" onClick="screenProportions.setScreenSize(this.value);">
+                    <label for="XGA">XGA 1024x768 (eg. iPad)</label><br>
                     <button class="switch" id="orientation">Switch orientation</button>
                 </fieldset>
             </div>
@@ -56,11 +56,11 @@
                 </p>
                 <p class="p">The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the <code>/apps</code> directory and change the path in the <code>placeContent</code> method of <code>/scripts/main.js</code> to set it as the iFrame src.
                 </p>
-                <p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk">...index.html?http://news.bbc.co.uk</a>
+                <p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk" title="BBC at default QVGA">...index.html?http://news.bbc.co.uk</a> you can also append a further argument to specify the initial resolution, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk?VGA" title="BBC at VGA">...index.html?http://news.bbc.co.uk?VGA</a>
                 </p>
-                <p class="p">A good example to try here is <a href="http://www.colly.com/">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
+                <p class="p">A good example to try here is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.colly.com/?HVGA" title="colly.com at HVGA">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
                 </p>
-                <p class="p">Another excellent example is <a href="http://hicksdesign.co.uk/">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
+                <p class="p">Another excellent example is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://hicksdesign.co.uk/?VGA" title="Hicks Design at VGA">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
                 </p>
                 <p class="p">Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> being developed can be run directly in the browser as well. The test rig just allows easy verification of CSS across different device screen sizes and orientations.
                 </p>
@@ -68,16 +68,12 @@
 
             <footer>
                 <span id="date">
-                    Dominic Butler - 27th October 2010
+                    Dominic Butler - 30th January 2011
                 </span>
                 <span id="twitter">- <a href="http://twitter.com/swervo">twitter</a></span>
                 <span id="tumblr">- <a href="http://swervo.tumblr.com/">tumblr</a></span>
                 <span id="github">- <a href="http://github.com/swervoCode">github</a></span>
-                <div id="copyright">
-                    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png"/>
-                    </a><br/>
-                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" style="font-weight:normal;">Creative Commons Attribution 3.0 Unported License</a>.
+                <div id="copyright">This work is released according to the terms of the <a rel="license" href="http://unlicense.org/" style="font-weight:normal;">Unlicense</a>.
                 </div>
             </footer>
 

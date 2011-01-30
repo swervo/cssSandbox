@@ -5,11 +5,12 @@ domLib.addLoadEvent(function() {
 var screenProportions = {
 
     init: function() {
+        this.resolutions = domLib.objConverter(["QVGA", "HVGA", "nHD", "VGA", "WVGA", "SVGA", "XGA"]);
         this.deviceScreen = domLib.byId("deviceScreen");
-        this.placeContent();
         this.connectUp();
         this.orientation = "portrait";
         this.setScreenSize("QVGA");
+        this.placeContent();
     },
 
     connectUp: function() {
@@ -28,11 +29,16 @@ var screenProportions = {
     // Change the src here to try out different apps
     placeContent: function() {
         this.urlArgs = location.href.split("?");
-        // if using locally comment out the line below
-        this.deviceScreen.src = this.urlArgs[1] ? this.urlArgs[1] : "apps/demoApp/index.html";
-        // if using locally uncomment out the line below and replace with path to your app
-        // eg. this.deviceScreen.src = "the/path/to/your/app.html"
-        // this.deviceScreen.src = "apps/demoApp/index.html";
+        if (this.urlArgs[1]) {
+            this.deviceScreen.src = this.urlArgs[1];
+            // check the other argument is on the list
+            if( this.urlArgs[2] in this.resolutions ) {
+                this.setScreenSize(this.urlArgs[2]);
+                domLib.byId(this.urlArgs[2]).setAttribute("CHECKED");
+            }
+        } else {
+            this.deviceScreen.src = "apps/demoApp/index.html";
+        }
     },
 
     setScreenSize: function(screenSize) {

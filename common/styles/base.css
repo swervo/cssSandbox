@@ -1,14 +1,17 @@
+* {
+    margin:                 0px;
+    padding:                0px;
+}
+
 html, body {
-    font: 1em/1.5em Helvetica, sans-serif;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+    font:                   1em/1.5em Helvetica, sans-serif;
+    height:                 100%;
 }
 
 h1 {
-    font-size: 1.7em;
-    font-weight: normal;
-    line-height: 1.7em;
+    font-size:              1.7em;
+    font-weight:            normal;
+    line-height:            1.7em;
 }
 
 fieldset.screenRes {
@@ -18,39 +21,43 @@ fieldset.screenRes {
     border:                 2px solid #D8D8D8;
     -webkit-border-radius:  10px;
     -moz-border-radius:     10px;
-    padding:                20px;
+    padding:                10px 20px 10px;
 }
 
 fieldset > label:first-child {
     display:                block;
+    margin-bottom:          10px;
     font-size:              1em;
+    font-weight:            bold;
 }
 
 fieldset button {
-    margin-top:             20px;
+    margin:                 20px 2px 2px;
+    padding:                3px 6px 4px;
 }
 
 fieldset input {
+    margin:                 3px;
     vertical-align:         top;
 }
 
 ul li {
-    list-style: circle;
-    margin: 0px 0px 0px 25px;
+    list-style:             circle;
+    margin:                 0px 0px 0px 25px;
 }
 
 a {
-    color: #039;
-    font-weight: bold;
+    color:                  #039;
+    font-weight:            bold;
 }
 a:visited {
-    color: #006;
+    color:                  #006;
 }
 a:hover {
-    color: #00f;
+    color:                  #00f;
 }
 a:focus {
-    outline: #666 dotted 1px;
+    outline:                #666 dotted 1px;
 }
 
 .mainContent {
@@ -62,19 +69,20 @@ a:focus {
 }
 
 .copy {
-    width: 45%;
-    padding-bottom: 35px;
+    width:                  45%;
+    padding-bottom:         35px;
 }
 
 .copy p {
-    margin: 15px 0px;
+    margin:                 15px 0px;
 }
 
 .copy code {
-    font: 0.8em Monaco, Courier;
+    font:                   0.8em Monaco, Courier;
 }
 
 header {
+    display:                block;
     border-bottom:          1px solid #999;
     margin-bottom:          10px;
 }
@@ -91,8 +99,6 @@ footer {
 }
 
 div #copyright {
-    font-size:              0.6em;
-    line-height:            1em;
     float:                  right;
     text-align:             right;
 }
