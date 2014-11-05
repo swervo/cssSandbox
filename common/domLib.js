@@ -1,3 +1,5 @@
+"use strict";
+
 (function(aWindow) {
     var domLib = {};
 
@@ -11,18 +13,18 @@
         };
     };
 
-    domLib.addLoadEvent = function(aFunc, context) {
+    domLib.addLoadEvent = function(aFunc) {
         var oldOnload = window.onload;
-        if (typeof window.onload != 'function') {
+        if (typeof window.onload !== "function") {
             window.onload = aFunc;
         } else {
             window.onload = function() {
                 oldOnload();
                 aFunc();
-            }
+            };
         }
     };
-    
+
     // adapted from http://snook.ca/archives/javascript/testing_for_a_v
     domLib.objConverter = function (a) {
         var o = {};

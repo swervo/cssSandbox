@@ -1,6 +1,6 @@
-domLib.addLoadEvent(function() {
-    screenProportions.init();
-});
+/* global domLib */
+
+"use strict";
 
 var screenProportions = {
 
@@ -14,15 +14,15 @@ var screenProportions = {
     },
 
     connectUp: function() {
-        domLib.byId("orientation").addEventListener('click', domLib.bind(this, this.rotateScreen), false);
+        domLib.byId("orientation").addEventListener("click", domLib.bind(this, this.rotateScreen), false);
     },
 
     rotateScreen: function() {
         if (this.orientation === "portrait") {
-            this.orientation = "landscape"
+            this.orientation = "landscape";
         } else {
-            this.orientation = "portrait"
-        };
+            this.orientation = "portrait";
+        }
         this.updateDeviceClasses();
     },
 
@@ -34,7 +34,7 @@ var screenProportions = {
             // check the other argument is on the list
             if( this.urlArgs[2] in this.resolutions ) {
                 this.setScreenSize(this.urlArgs[2]);
-                domLib.byId(this.urlArgs[2]).setAttribute("CHECKED");
+                domLib.byId(this.urlArgs[2]).checked = true;
             }
         } else {
             this.deviceScreen.src = "apps/demoApp/index.html";
@@ -49,4 +49,8 @@ var screenProportions = {
     updateDeviceClasses: function() {
         this.deviceScreen.className = "screen" + " " + this.orientation + " " + this.screenSize;
     }
-}
+};
+
+domLib.addLoadEvent(function() {
+    screenProportions.init();
+});

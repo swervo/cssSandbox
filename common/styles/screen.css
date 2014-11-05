@@ -7,12 +7,13 @@
 
 .screen {
     position:               absolute;
-    right:                  0px;
+    right:                  0;
     top:                    57px;
     border:                 1px solid #666;
     overflow:               hidden;
-    -webkit-box-shadow:     0px 0px 8px #333;
-    -moz-box-shadow:        0px 0px 8px #333;
+    -webkit-box-shadow:     0 0 8px #333;
+    -moz-box-shadow:        0 0 8px #333;
+    box-shadow:             0 0 8px #333;
 }
 
 /* QVGA */

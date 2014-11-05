@@ -4,16 +4,16 @@ Simple rig for testing mobile CSS3 media queries in the browser thus saving:
 
     Resizing browser to activate the queries
     Deploying code to multiple devices
-    
+
 It uses an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
 
 The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the /apps directory and change the path in the 'placeContent' method of /scripts/main.js to set it as the iFrame src.
 
-Alternatively you can append a query url to have it load directly in the iFrame, eg. 
+Alternatively you can append a query url to have it load directly in the iFrame, eg.
 
-<a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk" title="BBC at default QVGA">...index.html?http://news.bbc.co.uk</a> 
+<a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk" title="BBC at default QVGA">...index.html?http://news.bbc.co.uk</a>
 
-you can also append a further argument to specify the initial resolution, eg. 
+you can also append a further argument to specify the initial resolution, eg.
 
 <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk?VGA" title="BBC at VGA">...index.html?http://news.bbc.co.uk?VGA</a>
 

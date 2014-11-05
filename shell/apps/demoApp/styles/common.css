@@ -1,7 +1,7 @@
 body {
-	margin: 0px;
-	padding: 0px;
-	background-color: #CCC;
+    margin: 0;
+    padding: 0;
+    background-color: #CCC;
     font-family: Helvetica, sans-serif;
 }
 
@@ -14,8 +14,9 @@ body:after {
 .someContent {
     height: 40px;
     border: 2px solid #666;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     float: left;
     text-align: center;
     line-height: 36px;
@@ -24,17 +25,17 @@ body:after {
 @media (orientation:portrait) {
     .someContent {
         width: 100%;
-    	background-color: black;
-    	color: white;
-    	margin: 5% 0%;
+        background-color: black;
+        color: white;
+        margin: 5% 0;
     }
 }
 
 @media (orientation:landscape) {
-	.someContent {
+    .someContent {
         width: 50%;
-    	background-color: white;
-    	color: black;
-    	margin: 5% 0%;
+        background-color: white;
+        color: black;
+        margin: 5% 0;
     }
 }
