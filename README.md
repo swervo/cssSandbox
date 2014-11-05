@@ -1,4 +1,5 @@
-== Test rig for mobile CSS3 media queries
+Test rig for mobile CSS3 media queries
+======================================
 
 Simple rig for testing mobile CSS3 media queries in the browser thus saving:
 
@@ -23,7 +24,7 @@ Another excellent example is <a href="http://www.papersnail.co.uk/sandbox/shell/
 
 Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> being developed can be run directly in the browser as well. The test rig just allows easy verification of CSS across different device screen sizes and orientations.
 
-= Resolutions included:
+## Resolutions included:
 
     QVGA 320x240 (eg. Nokia 6700)
     HVGA 480x320 (eg. iPhone 3G, 3GS)
@@ -33,6 +34,6 @@ Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> bei
     SVGA 800x640
     XGA 1024x768 (eg. iPad)
 
-= License
+## License
 
 The Unlicense: http://unlicense.org/ (aka: public domain)
