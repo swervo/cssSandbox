@@ -5,7 +5,9 @@
 var screenProportions = {
 
     init: function() {
-        this.resolutions = domLib.objConverter(["QVGA", "HVGA", "nHD", "VGA", "WVGA", "SVGA", "XGA"]);
+        this.resolutions = domLib.objConverter(
+            ["QVGA", "HVGA", "iP5", "nHD", "VGA", "WVGA", "SVGA", "XGA"]
+        );
         this.deviceScreen = domLib.byId("deviceScreen");
         this.connectUp();
         this.orientation = "portrait";

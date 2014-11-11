@@ -40,6 +40,17 @@
     height:                 320px;
 }
 
+/* iPhone 5 */
+
+.portrait.iP5 {
+    width:                  320px;
+    height:                 568px;
+}
+.landscape.iP5 {
+    width:                  568px;
+    height:                 320px;
+}
+
 
 /* nHD - eg. Nokia N8 */
 
