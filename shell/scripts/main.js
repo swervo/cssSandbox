@@ -50,7 +50,12 @@ var screenProportions = {
 
     updateDeviceClasses: function() {
         this.deviceScreen.className = "screen" + " " + this.orientation + " " + this.screenSize;
+        this.deviceScreen.contentWindow.postMessage(
+            "frameResize",
+            "http://www.papersnail.co.uk"
+        );
     }
+
 };
 
 domLib.addLoadEvent(function() {
