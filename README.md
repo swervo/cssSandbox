@@ -1,7 +1,9 @@
 Test rig for responsive design
 ======================================
 
-Simple rig for testing CSS3 media queries in the browser. Utilises an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
+Simple rig for testing CSS3 media queries in the browser.
+
+Utilises an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
 
 ## Resolutions included:
 
@@ -28,11 +30,9 @@ Append a further argument to specify the initial resolution, eg.
 
 ## Personal:
 
-Another excellent example is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://hicksdesign.co.uk/?VGA" title="Hicks Design at VGA">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
-
 ## Selected public sites:
 
-
+Another excellent example is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://hicksdesign.co.uk/?VGA" title="Hicks Design at VGA">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
 
 ## License
 
