@@ -5,13 +5,12 @@
 var screenProportions = {
 
     init: function() {
-        this.resolutions = domLib.objConverter(
-            ["QVGA", "HVGA", "iP5", "nHD", "VGA", "WVGA", "SVGA", "XGA"]
-        );
+        this.resolutions = ["QVGA", "HVGA", "iP5", "nHD", "VGA", "WVGA", "SVGA", "XGA"];
+        this.screenFrame = domLib.byId("screenFrame");
         this.deviceScreen = domLib.byId("deviceScreen");
         this.connectUp();
         this.orientation = "portrait";
-        this.setScreenSize("QVGA");
+        this.setScreenSize("HVGA");
         this.placeContent();
     },
 
@@ -34,7 +33,7 @@ var screenProportions = {
         if (this.urlArgs[1]) {
             this.deviceScreen.src = this.urlArgs[1];
             // check the other argument is on the list
-            if( this.urlArgs[2] in this.resolutions ) {
+            if (this.urlArgs[2] && this.resolutions.indexOf(this.urlArgs[2])) {
                 this.setScreenSize(this.urlArgs[2]);
                 domLib.byId(this.urlArgs[2]).checked = true;
             }
@@ -49,7 +48,7 @@ var screenProportions = {
     },
 
     updateDeviceClasses: function() {
-        this.deviceScreen.className = "screen" + " " + this.orientation + " " + this.screenSize;
+        this.screenFrame.className = "screenFrame" + " " + this.orientation + " " + this.screenSize;
         this.deviceScreen.contentWindow.postMessage(
             "frameResize",
             "http://www.papersnail.co.uk"

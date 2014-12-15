@@ -2,18 +2,16 @@
    Adjusting the width demonstrates how the component scales to the available screen estate */
 
 .screenFrame {
-    overflow: auto;
+    box-shadow:             0 0 8px #333;
+    border:                 1px solid #666;
+    float:                  right;
+    overflow:               hidden;
 }
 
-.screen {
-    position:               absolute;
-    right:                  0;
-    top:                    57px;
-    border:                 1px solid #666;
-    overflow:               hidden;
-    -webkit-box-shadow:     0 0 8px #333;
-    -moz-box-shadow:        0 0 8px #333;
-    box-shadow:             0 0 8px #333;
+.deviceScreen {
+    height:                 100%;
+    width:                  100%;
+    border-width:           0;
 }
 
 /* QVGA */
@@ -51,7 +49,6 @@
     height:                 320px;
 }
 
-
 /* nHD - eg. Nokia N8 */
 
 .portrait.nHD {
@@ -88,7 +85,6 @@
     height:                 480px;
 }
 
-
 /* SVGA */
 
 .portrait.SVGA {
@@ -100,7 +96,6 @@
     width:                  800px;
     height:                 600px;
 }
-
 
 /* XGA */
 

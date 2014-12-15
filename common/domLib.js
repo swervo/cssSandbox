@@ -25,15 +25,6 @@
         }
     };
 
-    // adapted from http://snook.ca/archives/javascript/testing_for_a_v
-    domLib.objConverter = function (a) {
-        var o = {};
-        for(var i = 0; i < a.length; i++) {
-            o[a[i]] = "";
-        }
-        return o;
-    };
-
     aWindow.domLib = domLib;
 
 })(window);

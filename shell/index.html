@@ -1,88 +1,95 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8">
     <head>
-        <title>Test rig for mobile CSS3 media queries</title>
+        <title>Test rig for responsive design</title>
+        <link rel='shortcut icon' type='image/x-icon' href='../../images/favicons/favicon.ico'/>
         <link rel="stylesheet" href="../common/styles/style.css">
-        <script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
-        <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
-        <!-- // <script type="text/javascript">
-        //   var _gaq = _gaq || [];
-        //   _gaq.push(['_setAccount', 'UA-12491678-3']);
-        //   _gaq.push(['_trackPageview']);
-        //
-        //   (function() {
-        //     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        //   })();
-        // </script> -->
-    </head>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-12491678-3']);
+            _gaq.push(['_trackPageview']);
 
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
     <body>
         <div class="mainContent">
-            <header>
-                <h1>Test rig for mobile CSS3 media queries</h1>
-            </header>
+            <header>Test rig for responsive design</header>
+            <!-- This iFrame container is to constrain the component to a device screen size -->
+            <div id="screenFrame" class="screenFrame">
+                <iFrame id="deviceScreen" class="deviceScreen"></iFrame>
+            </div>
             <div class="controls">
                 <fieldset class="screenRes">
-                    <label>Screen resolution:</label>
-                    <input type="radio" value="QVGA" name="screenRes" id="QVGA" onClick="screenProportions.setScreenSize(this.value);" CHECKED>
-                    <label for="QVGA">QVGA 320x240 (eg. Nokia 6700)</label><br>
-                    <input type="radio" value="HVGA" name="screenRes" id="HVGA" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="HVGA">HVGA 480x320 (eg. iPhone 3G, 3GS)</label><br>
-                    <input type="radio" value="iP5" name="screenRes" id="iP5" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="iP5">iP5 568x320 (eg. iPhone 5/5s)</label><br>
-                    <input type="radio" value="nHD" name="screenRes" id="nHD" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="nHD">nHD 640x360 (eg. Nokia N8)</label><br>
-                    <input type="radio" value="VGA" name="screenRes" id="VGA" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="VGA">VGA 640x480</label><br>
-                    <input type="radio" value="WVGA" name="screenRes" id="WVGA" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="WVGA">WVGA 800x480 (eg. Nokia N900, Nexus One)</label><br>
-                    <input type="radio" value="SVGA" name="screenRes" id="SVGA" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="SVGA">SVGA 800x600</label><br>
-                    <input type="radio" value="XGA" name="screenRes" id="XGA" onClick="screenProportions.setScreenSize(this.value);">
-                    <label for="XGA">XGA 1024x768 (eg. iPad)</label><br>
-                    <button class="switch" id="orientation">Switch orientation</button>
+                    <span class="screenRes--title">Screen resolution:</span>
+                    <label><input type="radio" value="QVGA" id="QVGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">QVGA 320x240 (eg. Nokia 6700)</label><br>
+                    <label><input type="radio" value="HVGA" id="HVGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);" CHECKED>HVGA 480x320 (eg. iPhone 3G, 3GS)</label><br>
+                    <label><input type="radio" value="iP5" id="iP5" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">iP5 568x320 (eg. iPhone 5/5s)</label><br>
+                    <label><input type="radio" value="nHD" id="nHD" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">nHD 640x360 (eg. Nokia N8)</label><br>
+                    <label><input type="radio" value="VGA" id="VGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">VGA 640x480</label><br>
+                    <label><input type="radio" value="WVGA" id="WVGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">WVGA 800x480 (eg. Nokia N900, Nexus One)</label><br>
+                    <label><input type="radio" value="SVGA" id="SVGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">SVGA 800x600</label><br>
+                    <label><input type="radio" value="XGA" id="XGA" name="screenRes" onClick="screenProportions.setScreenSize(this.value);">XGA 1024x768 (eg. iPad)</label><br>
+                    <button class="screenRes--switch" id="orientation">Switch orientation</button>
                 </fieldset>
             </div>
 
-            <div id="copy" class="copy">
-                <p class="p">Simple rig for testing mobile CSS3 media queries in the browser thus saving:
-                </p>
+            <div class="copy">
+                <h2>Instructions</h2>
+                <p>Append a query url to have it load directly in the iFrame:</p>
                 <ul>
-                    <li>Resizing browser to activate the queries</li>
-                    <li>Deploying code to multiple devices</li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.bostonglobe.com/" title="Boston Globe at default HVGA">...index.html?http://www.bostonglobe.com</a>
+                    </li>
                 </ul>
-                <p class="p">It uses an iFrame to represent the target device screen size and some simple controls to flip the orientation and switch between screen sizes.
+                <p>you can also append a further argument to specify the initial resolution:
+                <ul>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.bostonglobe.com?iP5" title="Boston Globe at iP5">...index.html?http://www.bostonglobe.com?iP5</a>
+                    </li>
+                </ul>
                 </p>
-                <p class="p">The source code is available on <a href="http://github.com/swervoCode">github</a>. Grab it, place your application in the <code>/apps</code> directory and change the path in the <code>placeContent</code> method of <code>/scripts/main.js</code> to set it as the iFrame src.
-                </p>
-                <p class="p">Alternatively you can append a query url to have it load directly in the iFrame, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk" title="BBC at default QVGA">...index.html?http://news.bbc.co.uk</a> you can also append a further argument to specify the initial resolution, eg. <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://news.bbc.co.uk?VGA" title="BBC at VGA">...index.html?http://news.bbc.co.uk?VGA</a>
-                </p>
-                <p class="p">A good example to try here is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.colly.com/?HVGA" title="colly.com at HVGA">colly.com</a> which features a modular design that is well-suited to scaling to different device resolutions and also makes good use of CSS3 media queries.
-                </p>
-                <p class="p">Another excellent example is <a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://hicksdesign.co.uk/?VGA" title="Hicks Design at VGA">Hicks Design</a> which has a really nice fluid layout that scales right down to QVGA.
-                </p>
-                <p class="p">Obviously <a href="apps/demoApp/index.html" target="_blank">applications</a> being developed can be run directly in the browser as well. The test rig just allows easy verification of CSS across different device screen sizes and orientations.
-                </p>
+                <h2>Examples</h2>
+                <h3>Personal:</h3>
+                <ul>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.papersnail.co.uk/portfolio/fizzPop/?iP5">Fizzin' & Poppin'</a> - click airborne bubbles to pop.
+                    </li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.papersnail.co.uk/portfolio/CSSReflections/?iP5">Box reflect test</a> - autoplay or manual control.
+                    </li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.papersnail.co.uk/portfolio/rNotes/?iP5">Responsive Notes application</a> - switch orientation for optimised experience.
+                    </li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://www.papersnail.co.uk/portfolio/rContacts/?iP5">Responsive Contacts</a> - switch the orientation and try the filters.
+                    </li>
+                </ul>
+
+                <h3>Public:</h3>
+                <ul>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://hicksdesign.co.uk/?QVGA" title="Hicks Design at QVGA">Hicks Design</a> - scales right down to QVGA
+                    </li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://getbootstrap.com/?VGA" title="Bootstrap at VGA">Bootstrap</a> - popular framework for mobile first web projects
+                    </li>
+                    <li><a href="http://www.papersnail.co.uk/sandbox/shell/index.html?http://goldengridsystem.com/?WVGA" title="Golden Grid system at WVGA">Golden Grid System</a> - lightweight folding grid approach to responsive design
+                    </li>
+                </ul>
             </div>
 
             <footer>
-                <span id="date">
+                <span>
                     Dominic Butler - 30th January 2011
                 </span>
-                <span id="twitter">- <a href="http://twitter.com/swervo">twitter</a></span>
-                <span id="tumblr">- <a href="http://swervo.tumblr.com/">tumblr</a></span>
-                <span id="github">- <a href="http://github.com/swervo">github</a></span>
-                <div class="copyright">This work is released according to the terms of the <a rel="license" href="http://unlicense.org/">Unlicense.</a>.
+                <span>- <a href="http://twitter.com/swervo">twitter</a></span>
+                <span>- <a href="http://swervo.tumblr.com/">tumblr</a></span>
+                <span>- <a href="http://github.com/swervo">github</a></span>
+                <span>- <a href="https://www.linkedin.com/in/swervo">linkedIn</a></span>
+                <div class="copyright">This work is released according to the terms of the <a rel="license" href="http://unlicense.org/">Unlicense.</a>
                 </div>
             </footer>
 
-            <!-- This iFrame container is to constrain the component to a device screen size -->
-            <div id="screenFrame" class="screenFrame">
-                <iFrame id="deviceScreen" class="screen"></iFrame>
-            </div>
         </div>
-
     </body>
+    <script src="../common/domLib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="scripts/main.js" type="text/javascript" charset="utf-8"></script>
 </html>
