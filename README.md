@@ -7,7 +7,7 @@ Utilises an iFrame to represent the target device screen size and some simple co
 
 ## Resolutions included:
 
-| Abbreviation | Screen size | Notes |
+| Name | Screen size | Notes |
 | ---------- | ----------- | ----------------- |
 | QVGA | 320x240 | (eg. Nokia 6700) |
 | HVGA | 480x320 | (eg. iPhone 3G, 3GS) |
